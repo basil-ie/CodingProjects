@@ -1,4 +1,4 @@
-HEY IT"S DHRUV
+HEY IT'S DHRUV
 
 Here's what you do everytime you finish a coding session.
 
