@@ -1,0 +1,14 @@
+/**
+ * Written by Basil Ezenwa
+ */
+import.java.util.Scanner;
+public class Homework00 {
+  
+  
+  public static void main(String[] args) { 
+    System.out.println("Please type a number in binary.");
+    
+  }
+ 
+  
+}
