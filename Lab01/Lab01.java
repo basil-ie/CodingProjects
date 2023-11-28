@@ -34,10 +34,13 @@ public class Lab01 {
     //A for loop with the "getNumericValue" function attached to the character array was used to successfully create an integer array with each digit of MM/DD its correct index.
    
     //The if/else statements below handle various error messages of invalid date types (ex. 02/30, 13/02, 04/31, 05/53 etc.).
-    //This is done by comparing the value of indeces 0, 1, 3, & 4 in arr2 to each other, following what we know must be the case in the calendar.
+    //This is done by comparing the value of indeces 0, 1, 3, & 4 in arr2 to each other, following what we know must be the case in a calendar year.
     //Notice how index 2 is never considered below. This is because index 2 contained the "/" in the character array, and therefore is irrelevant in the determination of the validity of dates. 
     
-    if ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)){
+    if ( ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)) && ((arr2[3] == 3 && arr2[4] > 1) || arr2[3] > 3)){
+      System.out.println("Invalid month and day, please try again!");
+    }
+    else if ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)){
       System.out.println("Invalid month, please try again!");
     } 
     else if ((arr2[3] == 3 && arr2[4] > 1) || arr2[3] > 3){
@@ -49,14 +52,11 @@ public class Lab01 {
     else if ((arr2[0] == 0 || arr2[1] == 1) && (arr2[1] == 4 || arr2[1] == 6 || arr2[1] == 1 || arr2[1] == 9) && (arr2[3] == 3 && arr2[4] >= 1)){
     System.out.println("Invalid day, please try again!");
     }
-    else if ( ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)) && ((arr2[3] == 3 && arr2[4] > 1) || arr2[3] > 3)){
-      System.out.println("Invalid month and day, please try again!");
-    }
-    
+ 
     //The code below handles the Zodiac assignments based on the rest of the possible dates. This is the tedious part and I'm almost certain there has to be a better way to do this but alas...
     // Like what if there was a "parse date" function or something like that lmao. Anyway, this is it.
    
-  if ((arr2[0] == 0 && arr2[1] == 1) && (arr2[3] == 2 || arr2[3] == 3)) {
+  else if ((arr2[0] == 0 && arr2[1] == 1) && arr2[3] >= 2 ) {
       System.out.println("You are an Aquarius!");
     }
   else if ((arr2[0] == 0 && arr2[1] == 2) && (arr2[3] == 0 || (arr2[3] == 1 && arr2[4] <= 8))) {
@@ -113,19 +113,19 @@ public class Lab01 {
     else if ((arr2[0] == 1 && arr2[1] == 0 ) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
       System.out.println("You are a Scorpio!"); 
   }
-     else if ((arr2[0] == 1 && arr2[1] ==1) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
+    else if ((arr2[0] == 1 && arr2[1] ==1) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
       System.out.println("You are a Scorpio!");
   }
-     else if ((arr2[0] == 1 && arr2[1] == 1 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
+    else if ((arr2[0] == 1 && arr2[1] == 1 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
       System.out.println("You are a Sagittarius!"); 
   }
-     else if ((arr2[0] == 1 && arr2[1] ==2) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
+    else if ((arr2[0] == 1 && arr2[1] ==2) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
       System.out.println("You are a Sagittarius!");
   }
-     else if ((arr2[0] == 1 && arr2[1] == 2 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
+    else if ((arr2[0] == 1 && arr2[1] == 2 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
       System.out.println("You are a Capricorn!"); 
   }
-      else if ((arr2[0] == 0 && arr2[1] == 1 ) && arr2[3] <= 1){
+    else if ((arr2[0] == 0 && arr2[1] == 1 ) && arr2[3] <= 1){
       System.out.println("You are a Capricorn!"); 
   }
   }
