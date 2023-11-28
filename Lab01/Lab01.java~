@@ -1,0 +1,16 @@
+/**
+ * Written by Basil Ezenwa.
+ */
+import java.util.Scanner;
+public class Lab01 {
+  //The purpose of this program is to have the user input their birthday into the program (using numbers) to have the program output their Zodiac sign.
+  
+  public static void main(String[] args) { 
+    System.out.println("This program will let you know what your Zodiac sign is! Please input your birthday in the format MM/DD.");
+                        
+    
+  }
+  
+
+  
+}
