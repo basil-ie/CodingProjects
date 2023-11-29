@@ -8,11 +8,20 @@ public class Lab01 {
   public static void main(String[] args) { 
     Boolean x = true;
     while (x == true){
+      //I put this whole ass code in a giant while loop to allow for the user to test birthdays over and over again.
+      //Apparently this is the only way to repeat sections of code in Java, according to Google. Apparently.
+      //If the user does not wish to continue, I assign the Boolean x the value of false, which breaks the while loop and therefore stops the program. 
     System.out.println("This program will let you know what your Zodiac sign is! Please input your birthday in the format MM/DD.");
     //^So the first thing I'm doing is deciding on the format through which I want users to input birthdays into the programm. 
     //MM/DD is standard for the USA, so I've decided on that. But because the program has to look at multiple digits at once to determine which month/day it is, I may be making this harder than it needs to be.
     //But dammit I'm gonna try anyway bc I think I have an idea of how to do this using arrays. Maybe there's an easier way to do what I've done in the MM/DD format, but whatever! I'm trying this way. 
     //I can think of a couple ways to make this more straightforward code wise (asking for day and month separately, not asking for MM/DD format, etc), but I want to challenge myself to do it this way for the user's convenience.
+    
+    Boolean y = true;
+    while (y == true){
+      //I made this smaller while loop in the bigger while loop to automatically get the user to retry should they input an invalid date. I just didn't want the introductory text to repeat in this case lol.
+      // If the user enters a valid date, then the Boolean y is set to false, breaking this loop.
+      
 
     Scanner sc = new Scanner(System.in);
     String bday = sc.nextLine();
@@ -70,8 +79,13 @@ public class Lab01 {
       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
+        //Supposedly, strings in Java have to be compared using the .equals() function and cannot use ==. I tried this section using == before, and it didn't work. The more you know!
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
     }
   else if ((arr2[0] == 0 && arr2[1] == 2) && (arr2[3] == 0 || (arr2[3] == 1 && arr2[4] <= 8))) {
@@ -80,7 +94,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
     }
   else if ((arr2[0] == 0 && arr2[1] == 2) && ((arr2[3] == 1 && arr2[4] == 9) || arr2[3] == 2)) {
@@ -89,7 +107,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
     }
   else if ((arr2[0] == 0 && arr2[1] == 3) && ((arr2[3] == 2 && arr2[4] == 0) || ((arr2[3] <= 1)))) {
@@ -98,7 +120,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] == 3) && (arr2[3] == 2 && arr2[4] >=1) || ((arr2[0] == 0 && arr2[1] == 3) && (arr2[3] == 3 && (arr2[4] == 0 || arr2[4] == 1 )))) {
@@ -107,7 +133,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] ==4) && arr2[3] <= 1) {
@@ -116,7 +146,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] ==4) && (arr2[3] == 2 || arr2[3] == 3)){
@@ -125,7 +159,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   } 
   else if ((arr2[0] == 0 && arr2[1] ==5) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] == 0 ))) {
@@ -134,7 +172,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] ==5) && ((arr2[3] == 2 && arr2[4] > 0 ) || arr2[3] == 3)) {
@@ -143,7 +185,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] ==6) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] == 0 ))) {
@@ -152,7 +198,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
   else if ((arr2[0] == 0 && arr2[1] ==6) && ((arr2[3] == 2 && arr2[4] > 0 ) || arr2[3] == 3)) {
@@ -161,7 +211,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
    else if ((arr2[0] == 0 && arr2[1] ==7) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
@@ -170,7 +224,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
    else if ((arr2[0] == 0 && arr2[1] ==7) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
@@ -179,7 +237,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
    else if ((arr2[0] == 0 && arr2[1] ==8) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
@@ -188,7 +250,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 0 && arr2[1] ==8) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
@@ -197,7 +263,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 0 && arr2[1] ==9) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
@@ -206,7 +276,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 0 && arr2[1] == 9 ) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
@@ -215,7 +289,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] ==0) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
@@ -224,7 +302,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] == 0 ) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
@@ -233,7 +315,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] ==1) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
@@ -242,7 +328,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] == 1 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
@@ -251,7 +341,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] ==2) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
@@ -260,7 +354,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 1 && arr2[1] == 2 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
@@ -269,7 +367,11 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
   }
     else if ((arr2[0] == 0 && arr2[1] == 1 ) && arr2[3] <= 1){
@@ -278,12 +380,17 @@ public class Lab01 {
       String answer = sc.nextLine();
       if (answer.equals("no") || answer.equals("No")){
         System.out.println("Thank you for using the program!");
+        y = false;
         x = false;
+      }
+      else {
+      System.out.println("Input another birthday in the format MM/DD.");
       }
       
   }
   }
   }
   }
+}
 
 
