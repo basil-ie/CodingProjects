@@ -1,0 +1,19 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class Testingstuff {
+  
+  
+  public static void main(String[] args) { 
+    int i = 4;
+    if(i*3>12) {
+      System.out.prinln("A");
+    }
+    else if (i%2 == 0){
+      System.out.println("B");
+      {
+  }
+  
+
+  
+}

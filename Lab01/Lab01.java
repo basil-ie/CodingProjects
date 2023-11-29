@@ -6,11 +6,14 @@ public class Lab01 {
   //The purpose of this program is to have the user input their birthday into the program (using numbers) to have the program output their Zodiac sign.
   
   public static void main(String[] args) { 
+    Boolean x = true;
+    while (x == true){
     System.out.println("This program will let you know what your Zodiac sign is! Please input your birthday in the format MM/DD.");
     //^So the first thing I'm doing is deciding on the format through which I want users to input birthdays into the programm. 
     //MM/DD is standard for the USA, so I've decided on that. But because the program has to look at multiple digits at once to determine which month/day it is, I may be making this harder than it needs to be.
     //But dammit I'm gonna try anyway bc I think I have an idea of how to do this using arrays. Maybe there's an easier way to do what I've done in the MM/DD format, but whatever! I'm trying this way. 
     //I can think of a couple ways to make this more straightforward code wise (asking for day and month separately, not asking for MM/DD format, etc), but I want to challenge myself to do it this way for the user's convenience.
+
     Scanner sc = new Scanner(System.in);
     String bday = sc.nextLine();
     //^Birthdays are taken in as Strings to account for leading zeroes and the "/".
@@ -39,95 +42,248 @@ public class Lab01 {
     
     if ( ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)) && ((arr2[3] == 3 && arr2[4] > 1) || arr2[3] > 3)){
       System.out.println("Invalid month and day, please try again!");
+      
     }
     else if ((arr2[0] >= 2) || (arr2[0] == 1 && arr2[1] > 2)){
       System.out.println("Invalid month, please try again!");
+      
     } 
     else if ((arr2[3] == 3 && arr2[4] > 1) || arr2[3] > 3){
       System.out.println("Invalid day, please try again!");
+       
     }
     else if (arr2[0] == 0 && arr2[1] == 2 && arr2[3] > 2){
-    System.out.println("Invalid day, please try again!"); 
+    System.out.println("Invalid day, please try again!");
+   
     }
     else if ((arr2[0] == 0 || arr2[1] == 1) && (arr2[1] == 4 || arr2[1] == 6 || arr2[1] == 1 || arr2[1] == 9) && (arr2[3] == 3 && arr2[4] >= 1)){
     System.out.println("Invalid day, please try again!");
+   
     }
+    
  
     //The code below handles the Zodiac assignments based on the rest of the possible dates. This is the tedious part and I'm almost certain there has to be a better way to do this but alas...
     // Like what if there was a "parse date" function or something like that lmao. Anyway, this is it.
    
   else if ((arr2[0] == 0 && arr2[1] == 1) && arr2[3] >= 2 ) {
       System.out.println("You are an Aquarius!");
+      System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
     }
   else if ((arr2[0] == 0 && arr2[1] == 2) && (arr2[3] == 0 || (arr2[3] == 1 && arr2[4] <= 8))) {
       System.out.println("You are an Aquarius!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
     }
   else if ((arr2[0] == 0 && arr2[1] == 2) && ((arr2[3] == 1 && arr2[4] == 9) || arr2[3] == 2)) {
       System.out.println("You are a Pisces!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
     }
   else if ((arr2[0] == 0 && arr2[1] == 3) && ((arr2[3] == 2 && arr2[4] == 0) || ((arr2[3] <= 1)))) {
        System.out.println("You are a Pisces!");
+        System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] == 3) && (arr2[3] == 2 && arr2[4] >=1) || ((arr2[0] == 0 && arr2[1] == 3) && (arr2[3] == 3 && (arr2[4] == 0 || arr2[4] == 1 )))) {
        System.out.println("You are an Aries!");
+        System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] ==4) && arr2[3] <= 1) {
       System.out.println("You are an Aries!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] ==4) && (arr2[3] == 2 || arr2[3] == 3)){
       System.out.println("You are a Taurus!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   } 
   else if ((arr2[0] == 0 && arr2[1] ==5) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] == 0 ))) {
       System.out.println("You are a Taurus!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] ==5) && ((arr2[3] == 2 && arr2[4] > 0 ) || arr2[3] == 3)) {
       System.out.println("You are a Gemini!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] ==6) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] == 0 ))) {
       System.out.println("You are a Gemini!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
   else if ((arr2[0] == 0 && arr2[1] ==6) && ((arr2[3] == 2 && arr2[4] > 0 ) || arr2[3] == 3)) {
-      System.out.println("You are a Cancer!"); 
+      System.out.println("You are a Cancer!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
    else if ((arr2[0] == 0 && arr2[1] ==7) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
       System.out.println("You are a Cancer!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
    else if ((arr2[0] == 0 && arr2[1] ==7) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
       System.out.println("You are a Leo!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
    else if ((arr2[0] == 0 && arr2[1] ==8) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
       System.out.println("You are a Leo!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 0 && arr2[1] ==8) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
       System.out.println("You are a Virgo!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 0 && arr2[1] ==9) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
       System.out.println("You are a Virgo!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 0 && arr2[1] == 9 ) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
       System.out.println("You are a Libra!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] ==0) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 2 ))) {
       System.out.println("You are a Libra!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] == 0 ) && ((arr2[3] == 2 && arr2[4] > 2 ) || arr2[3] == 3)) {
       System.out.println("You are a Scorpio!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] ==1) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
       System.out.println("You are a Scorpio!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] == 1 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
       System.out.println("You are a Sagittarius!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] ==2) && (arr2[3] <= 1 || (arr2[3] == 2 && arr2[4] <= 1 ))) {
       System.out.println("You are a Sagittarius!");
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 1 && arr2[1] == 2 ) && ((arr2[3] == 2 && arr2[4] > 1 ) || arr2[3] == 3)) {
       System.out.println("You are a Capricorn!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
   }
     else if ((arr2[0] == 0 && arr2[1] == 1 ) && arr2[3] <= 1){
       System.out.println("You are a Capricorn!"); 
+       System.out.println("Test another birthday? (Type 'Yes' or 'No')");
+      String answer = sc.nextLine();
+      if (answer.equals("no") || answer.equals("No")){
+        System.out.println("Thank you for using the program!");
+        x = false;
+      }
+      
   }
   }
   }
+  }
+
 

@@ -48,20 +48,20 @@ public class Homework00 {
    //For some reason, java wants exponents (done with that Math.pow(base, exponent) function) to be in the double data type. Thankfully, converting from int to double happens automatically. Probably. 
    
     System.out.println("Please enter the second four-digit number in binary.");
-    Scanner sc2 = new Scanner(System.in);
-    String bnum2 = sc2.nextLine();
+    //Scanner sc2 = new Scanner(System.in);
+    bnum1 = sc.nextLine();
     
-    char [] arr3 = new char[bnum2.length()];
-    for (int i=0; i<bnum2.length(); i++){
-          arr3[i] = bnum2.charAt(i);
+    //arr1 = new char[bnum1.length()];
+    for (int i=0; i<bnum1.length(); i++){
+          arr1[i] = bnum1.charAt(i);
           }
     
-  int [] arr4 = new int[arr3.length];
-    for (int i=0; i<arr3.length; i++){
-      arr4[i] = Character.getNumericValue(arr3[i]);
+   //arr2 = new int[arr1.length];
+    for (int i=0; i<arr1.length; i++){
+      arr2[i] = Character.getNumericValue(arr1[i]);
     }
   
-    double decnum2 = arr4[0]*Math.pow(2,3) + arr4[1]*Math.pow(2,2) + arr4[2]*Math.pow(2,1) + arr4[3]*Math.pow(2,0);
+    double decnum2 = arr2[0]*Math.pow(2,3) + arr2[1]*Math.pow(2,2) + arr2[2]*Math.pow(2,1) + arr2[3]*Math.pow(2,0);
    System.out.println("The decimal value of your second binary number is "+decnum2+".");
    
    //This is all simply a copy of the code for the first four digit binary number applied to the second. New variables were used.

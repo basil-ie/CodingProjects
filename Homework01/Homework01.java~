@@ -1,0 +1,22 @@
+/**
+ Written by Basil Ezenwa
+ */
+import java.util.Scanner;
+public class Homework01 {
+  
+  //This is the "Choose Your Own Adventure" homework (or as I like to call it, the Pick Your Own Choose-venture).
+  //Idk what they really want me to do here lmfao but I'm assuming that I just make it so the program outputs different stuff based on user input. Not that hard I guess.
+  public static void main(String[] args) { 
+    System.out.println("You wake up in the middle of the night. It's so cold that you can hardly sleep.");
+    System.out.println("What do you want to do? Try to go back to bed (1), or change the temperature (2)? Type '1' or '2' to progress.");
+    Scanner sc = new Scanner(System.in);
+    String choice = sc.nextLine();
+    if (choice.equals("1")){
+      System.out.println("You try your best to ignore the cold and shut your eyes again. Suddenly, you hear a noise!");
+    }
+                       
+  }
+  
+ 
+  
+}
