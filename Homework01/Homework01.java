@@ -28,7 +28,10 @@ public class Homework01 {
       System.out.println("You wander through the darkness. How many steps forward do you take? (Pick a number 1 - 10)");
       choice = sc.nextLine();
       if (Integer.parseInt(choice) <= 5){
-        System.out.println("You move forward and reach the light switch. You flip it on.");
+        System.out.println("You move forward and reach the light switch. You flip it on, and can now see the thermostat. You change it and go back to bed. The end lol.");
+      }
+      else if (Integer.parseInt(choice) > 5){
+        System.out.println("You took too many steps forward! You bonked your head on the wall and died. The end lmao.");
       }
     }
                        
