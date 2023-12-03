@@ -1,0 +1,21 @@
+/**
+Written by Basil Ezenwa.
+ */
+import java.util.Scanner;
+public class Lab02 {
+  
+  
+  public static void main(String[] args) { 
+    //The function of this program is to be a "triangle maker," which takes user input in the form of an integer and outputs a triangle of corresponding size.
+    Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Welcome to the Triangle Maker! Please input a number to create a triangle of corresponding size.");
+    int size = sc.nextLine();
+    
+    
+    
+  }
+  
+
+  
+}

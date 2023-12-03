@@ -22,12 +22,14 @@ public class Testingstuff {
     
   System.out.println(i);
   */
+ 
     
-    //String a = "100";
-    //while(a.length() < 100){
-      //System.out.println(a);
-     // a+=50
+    String a = "100";
+    while(a.length() < 100){
+     System.out.println(a);
+     a+=50;
     
+    /*
     Scanner sc = new Scanner(System.in);
     String ohyeah = sc.nextLine();
     System.out.println("You typed "+ohyeah+".");
@@ -42,6 +44,7 @@ public class Testingstuff {
     int x = 7;
     
     System.out.println(x);
+    */
     
     
     }
@@ -52,6 +55,7 @@ public class Testingstuff {
   
 
   
+  }
 }
 
 
