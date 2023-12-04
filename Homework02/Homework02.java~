@@ -1,0 +1,15 @@
+/**
+ Written by Basil Ezenwa
+ */
+import java.util.Scanner;
+public class Homework02 {
+  //The purpose of this program is to play Rock, Paper, Scissors with the user!
+  
+  public static void main(String[] args) { 
+    String choices [] = {Rock, Paper, Scissors}
+    System.out.println(choices[Random().nextInt(3)];
+    
+  }
+  
+  
+}
