@@ -1,0 +1,23 @@
+/**
+ Written by Basil Ezenwa.
+ */
+import java.util.Scanner;
+public class Lab03 {
+  /*
+  Okay, so like I think the point of this program is to take user input in the form of ten day temperatures in a given winter, 
+  find the average temperature of those ten days, and tell the user which of those days were below average temperature.
+  */
+  
+  public static void main(String[] args) {
+    System.out.println("Hello! This program will find the average temperature of ten different winter days, and list which days saw temperatures that were colder than that average!");
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Please input the temperature of Day 1 in Fahrenheit.");
+    day1 = sc.nextDouble();
+    
+    
+    
+  }
+  
+  
+  
+}
