@@ -33,9 +33,15 @@ public class Lab03 {
     System.out.println("Please input the temperature of Day 10 in Fahrenheit.");
     Double day10 = sc.nextDouble();
     
+    //^^Takes care of user input of day temperatures, and assigns them to Double variables, as temperatures can have decimals.
+    
     Double dayArr [] = {day1, day2, day3, day4, day5, day6, day7, day8, day9, day10};
     
+    //^^Puts said temperatures into a single array.
+    
     Double sum = 0.0;
+    
+    //^^Declaring the sum variable that will be used in the for loop below.
     
     for (int i = 0; i < dayArr.length; i++){
       sum = sum + dayArr[i];
@@ -48,10 +54,9 @@ public class Lab03 {
      
     System.out.println("The average temperature was "+averageTemp+" degrees Fahrenheit.");
     
-    
-    
     ArrayList<Double> list = new ArrayList<Double>(); 
-    //^^Learned how to use ArrayLists. It seems like lists are useful for when you don't know what your array length is gonna be. 
+    //^^Learned how to use ArrayLists. It seems like lists are useful for when you don't know what your array length is gonna be.
+    //The purpose of this list is essentially to be a check if there exist any temperatures that are less than the average. 
     
    Boolean x = true;
    
