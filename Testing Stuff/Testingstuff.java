@@ -6,46 +6,35 @@ public class Testingstuff {
   
   
   public static void main(String[] args) { 
-   /**
-    double i = 4;
     
+    int [] a = {12, 3, 46, 5, 34, 100};
    
-   if (i%2 == 0){
-      System.out.println("B");
-      i++;
-    }
+   boolean hasSwapped = true;
+   while(hasSwapped)
+   {
+     hasSwapped = false;
+     for(int i=0; i < a.length - 1 ; i++)
+     {
+       if (a[i] > a[i + 1] )
+       {
+         //Swap
+         int temp = a[i];
+         a[i] = a[i + 1 ];
+         a[i + 1] = temp;
+         hasSwapped = true;
+       }
+     }
+   }
    
-  if (i / 2 == 2) {
-     System.out.println("Crazy.");
-     System.out.println(i/2);
+    for (int k:a )
+    {
+      System.out.println(k);
     }
     
-  System.out.println(i);
-  */
- 
-    
-    String a = "100";
-    while(a.length() < 100){
-     System.out.println(a);
-     a+=50;
-    
-    /*
-    Scanner sc = new Scanner(System.in);
-    String ohyeah = sc.nextLine();
-    System.out.println("You typed "+ohyeah+".");
-    
-    String yeehaw = sc.nextLine();
-    //yeehaw = ohyeah;
-    ohyeah = yeehaw;
-    //Looks like the assignment operator (=) assigns the value of the thing on the right to the thing on the left.
-    //The left-hand side of an assignment MUST be a variable. 
-    System.out.println("Then you typed "+ohyeah+".");
-    
-    int x = 7;
-    
-    System.out.println(x);
-    */
-    
+         
+         
+           
+     
     
     }
   
@@ -56,6 +45,6 @@ public class Testingstuff {
 
   
   }
-}
+
 
 

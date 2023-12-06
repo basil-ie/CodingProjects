@@ -1,0 +1,41 @@
+/**
+ Written by Basil Ezenwa.
+ */
+import java.util.Scanner;
+public class Homework03 {
+  
+  //Genuinely don't get what the hell they even want me to make for this one
+  //Apparently its about sorting rectangles based on length, width, and/or area?? What kinda fuckin' dweeb needs to "sort rectangles"?
+  //From what I understand, it's up to the user to input how many ever rectangles they want to compare, then input those rectangles' lengths and widths, and be presented with data including:
+  //-Each rectangle's area from smallest to largest
+  //-Each rectangle's area from largest to smallest
+  //-The average area of the rectangles
+  //-The minimum and maximum area of the rectangles. 
+  //I'm just gonna make what I assume they want me to make, and if that's wrong, then whatever. 
+  
+  public static void main(String[] args) { 
+    
+    System.out.println("Welcome to the Rectangle Sorter! This program will allow you to organize a collection of rectangles based on the value of their areas.");
+    
+    System.out.println("How many different rectangles do you want to compare? Please input a whole number greater than 1.");
+    
+    Scanner sc = new Scanner(System.in);
+    
+    int collectionSize = sc.nextLine();
+    
+    Double x = 5.5;
+    
+    Double y = x % 1;
+    
+    System.out.println(y);
+      
+    
+    //if ( collectionSize <= 1 )
+    
+    
+    
+  }
+  
+
+  
+}
