@@ -1,0 +1,16 @@
+/**
+ Basil Ezenwa
+ */
+import java.util.Scanner;
+public class Lab04 {
+  
+  //This is a program that's used to create two matrices and adds them together.
+  
+  public static void main(String[] args) { 
+    System.out.println("Hello, and welcome to the Matrix Addition Program!"\n"Please enter the length and width of the first matrix");
+    
+  }
+  
+ 
+  
+}
