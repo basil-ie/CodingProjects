@@ -91,7 +91,7 @@ public class Homework04 {
          field[potholeYLocation3][potholeXLocation3].equals("^") || field[potholeYLocation4][potholeXLocation4].equals("^") ||
          field[potholeYLocation5][potholeXLocation5].equals("^"))
       {
-        System.out.println("failed lol");
+        //Loop
       }
       else
       {
