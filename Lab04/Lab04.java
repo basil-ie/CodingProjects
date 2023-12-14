@@ -10,19 +10,19 @@ public class Lab04 {
  
     System.out.println("Hello, and welcome to the Matrix Addition Program!"+"\n"+"Please enter the length of the first matrix");
     Scanner sc = new Scanner(System.in);
-    int matrixLength = sc.nextInt();
+    int matrixHeight = sc.nextInt();
     System.out.println("Please enter the width of the first matrix");
     int matrixWidth = sc.nextInt();
     
-    int [][] matrixOne = new int[matrixLength][matrixWidth];
+    int [][] matrixOne = new int[matrixHeight][matrixWidth];
     
     System.out.println("Please enter the length of the second matrix");
     sc = new Scanner(System.in);
-    matrixLength = sc.nextInt();
+    matrixHeight = sc.nextInt();
     System.out.println("Please enter the width of the second matrix");
     matrixWidth = sc.nextInt();
     
-    int [][] matrixTwo = new int[matrixLength][matrixWidth];
+    int [][] matrixTwo = new int[matrixHeight][matrixWidth];
     //Matrices (remember those??) are basically arrays of arrays. The length and width of the arrays are handled just as I wrote my variables: Length first, width second.
     
     while (true){
@@ -30,23 +30,23 @@ public class Lab04 {
       //If I define the variables like matrixOne and matrixTwo within the loop, I'll get an error later. 
       //This was the only way I could think to loop this code while also maintaining the variables.
     if ((matrixOne.length != matrixTwo.length) || ( matrixOne[0].length != matrixTwo[0].length ))
-      //Notice how getting the length of a matrix is simply the length of the array, while the width of the array is array[0].length.
+      //Notice how getting the height of a matrix is simply the length of the array (which is equal to how many arrays there are), while the width of the array is array[0].length (the # of values in each array).
       //This is because it's the length of the first array in the array that determines what the width is (assuming the array is made up of arrays of equal length).
     {
       System.out.println("Incompatible matrices. Please try again with matrices of equal length and width");
       System.out.println("Please enter the length of the first matrix");
-      matrixLength = sc.nextInt();
+      matrixHeight = sc.nextInt();
       System.out.println("Please enter the width of the first matrix");
       matrixWidth = sc.nextInt();
-      int [][] swap = new int[matrixLength][matrixWidth];
+      int [][] swap = new int[matrixHeight][matrixWidth];
       matrixOne = swap;
       
       System.out.println("Please enter the length of the second matrix");
-      matrixLength = sc.nextInt();
+      matrixHeight = sc.nextInt();
         
       System.out.println("Please enter the width of the second matrix");
       matrixWidth = sc.nextInt();
-      int [][] swap2 = new int[matrixLength][matrixWidth];
+      int [][] swap2 = new int[matrixHeight][matrixWidth];
       matrixTwo = swap2;
     }
     else{
